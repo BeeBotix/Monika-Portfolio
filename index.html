@@ -33,6 +33,8 @@
             line-height: 1.6;
             overflow-x: hidden;
             position: relative;
+            opacity: 1;
+            visibility: visible;
         }
 
         /* Retro Grid Background */
@@ -57,7 +59,7 @@
             100% { transform: translate(50px, 50px); }
         }
 
-        /* Retro Cactus Designs */
+        /* Pixel Art Cactus Designs */
         .cactus-doodles {
             position: fixed;
             top: 0;
@@ -69,38 +71,37 @@
             opacity: 0.08;
         }
 
-        .retro-cactus {
+        .pixel-cactus {
             position: absolute;
             font-family: 'Orbitron', monospace;
-            font-weight: 700;
+            font-weight: 900;
             color: var(--medium-blue);
             animation: float 8s ease-in-out infinite;
             filter: drop-shadow(2px 2px 4px rgba(92, 124, 137, 0.3));
-        }
-
-        .retro-cactus.large {
-            font-size: 1.2rem;
-            line-height: 1.2;
-        }
-
-        .retro-cactus.medium {
-            font-size: 1rem;
-            line-height: 1.1;
-        }
-
-        .retro-cactus.small {
-            font-size: 0.8rem;
             line-height: 1;
+            letter-spacing: 0;
         }
 
-        .retro-cactus:nth-child(1) { top: 8%; left: 5%; animation-delay: 0s; }
-        .retro-cactus:nth-child(2) { top: 15%; right: 8%; animation-delay: 1.5s; }
-        .retro-cactus:nth-child(3) { top: 30%; left: 3%; animation-delay: 3s; }
-        .retro-cactus:nth-child(4) { top: 45%; right: 12%; animation-delay: 4.5s; }
-        .retro-cactus:nth-child(5) { top: 60%; left: 8%; animation-delay: 6s; }
-        .retro-cactus:nth-child(6) { top: 75%; right: 5%; animation-delay: 7.5s; }
-        .retro-cactus:nth-child(7) { top: 85%; left: 15%; animation-delay: 2s; }
-        .retro-cactus:nth-child(8) { top: 25%; left: 85%; animation-delay: 5s; }
+        .pixel-cactus.large {
+            font-size: 1rem;
+        }
+
+        .pixel-cactus.medium {
+            font-size: 0.8rem;
+        }
+
+        .pixel-cactus.small {
+            font-size: 0.6rem;
+        }
+
+        .pixel-cactus:nth-child(1) { top: 8%; left: 5%; animation-delay: 0s; }
+        .pixel-cactus:nth-child(2) { top: 15%; right: 8%; animation-delay: 1.5s; }
+        .pixel-cactus:nth-child(3) { top: 30%; left: 3%; animation-delay: 3s; }
+        .pixel-cactus:nth-child(4) { top: 45%; right: 12%; animation-delay: 4.5s; }
+        .pixel-cactus:nth-child(5) { top: 60%; left: 8%; animation-delay: 6s; }
+        .pixel-cactus:nth-child(6) { top: 75%; right: 5%; animation-delay: 7.5s; }
+        .pixel-cactus:nth-child(7) { top: 85%; left: 15%; animation-delay: 2s; }
+        .pixel-cactus:nth-child(8) { top: 25%; left: 85%; animation-delay: 5s; }
 
         @keyframes float {
             0%, 100% { transform: translateY(0px) rotate(0deg); }
@@ -176,10 +177,11 @@
 
         .logo-cactus {
             font-family: 'Orbitron', monospace;
-            font-weight: 700;
+            font-weight: 900;
             color: var(--medium-blue);
-            font-size: 1.2rem;
+            font-size: 1rem;
             line-height: 1;
+            letter-spacing: 0;
         }
 
         .nav-links {
@@ -202,6 +204,8 @@
             letter-spacing: 1px;
             font-weight: 700;
             font-size: 0.9rem;
+            z-index: 10;
+            white-space: nowrap;
         }
 
         .nav-links a::before {
@@ -226,6 +230,7 @@
             border-color: var(--dark-blue);
             transform: translateY(-2px);
             box-shadow: 0 6px 20px var(--shadow-hover);
+            z-index: 20;
         }
 
         /* Hero Section */
@@ -278,15 +283,16 @@
         }
 
         .hero-title::after {
-            content: '▲\A ║\A ║';
+            content: '██\A██\A██\A▓▓';
             position: absolute;
             top: -30px;
             right: -60px;
             font-family: 'Orbitron', monospace;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: var(--medium-blue);
             white-space: pre;
             line-height: 0.8;
+            letter-spacing: 0;
             animation: bounce 3s infinite;
             filter: drop-shadow(1px 1px 2px rgba(92, 124, 137, 0.5));
         }
@@ -396,14 +402,14 @@
         }
 
         .section-title::before {
-            content: '▲▲▲';
+            content: '▓▓▓';
             position: absolute;
             top: -20px;
             left: 50%;
             transform: translateX(-50%);
             font-size: 1rem;
             color: var(--medium-blue);
-            letter-spacing: 5px;
+            letter-spacing: 4px;
         }
 
         .section-title::after {
@@ -447,15 +453,16 @@
         }
 
         .profile-placeholder::before {
-            content: '▲\A ║\A ║\A ═';
+            content: '██\A██\A██\A▓▓\A▓▓';
             position: absolute;
             top: -40px;
             right: -30px;
             font-family: 'Orbitron', monospace;
-            font-size: 2rem;
+            font-size: 1.5rem;
             color: var(--medium-blue);
             white-space: pre;
             line-height: 0.8;
+            letter-spacing: 0;
             animation: wiggle 4s infinite;
             filter: drop-shadow(2px 2px 4px rgba(92, 124, 137, 0.5));
         }
@@ -502,13 +509,14 @@
         }
 
         .stat::before {
-            content: '▼';
+            content: '▓▓';
             position: absolute;
             top: 15px;
             right: 15px;
             font-family: 'Orbitron', monospace;
             color: var(--medium-blue);
-            font-size: 1.2rem;
+            font-size: 1rem;
+            letter-spacing: 0;
         }
 
         .stat:hover {
@@ -551,16 +559,17 @@
         }
 
         .project-card::before {
-            content: '▲\A ║\A ▼';
+            content: '██\A██\A▓▓';
             position: absolute;
             top: 20px;
             right: 20px;
             font-family: 'Orbitron', monospace;
-            font-size: 1rem;
+            font-size: 0.8rem;
             color: var(--medium-blue);
             opacity: 0.4;
             white-space: pre;
             line-height: 0.8;
+            letter-spacing: 0;
         }
 
         .project-card:hover {
@@ -658,7 +667,7 @@
         }
 
         .skill-category::before {
-            content: '◆◆◆';
+            content: '▓▓▓';
             position: absolute;
             top: 15px;
             right: 15px;
@@ -666,7 +675,7 @@
             font-size: 1rem;
             color: var(--medium-blue);
             opacity: 0.5;
-            letter-spacing: 3px;
+            letter-spacing: 2px;
         }
 
         .skill-category h3 {
@@ -722,16 +731,17 @@
         }
 
         .experience-card::before {
-            content: '▲\A ◆\A ▼';
+            content: '██\A▓▓\A██';
             position: absolute;
             top: 25px;
             right: 30px;
             font-family: 'Orbitron', monospace;
-            font-size: 1.5rem;
+            font-size: 1.2rem;
             color: var(--medium-blue);
             opacity: 0.3;
             white-space: pre;
             line-height: 1;
+            letter-spacing: 0;
         }
 
         .experience-header {
@@ -799,7 +809,7 @@
             left: 0;
             font-family: 'Orbitron', monospace;
             color: var(--dark-blue);
-            font-size: 1.2rem;
+            font-size: 1rem;
         }
 
         /* Contact Section */
@@ -820,16 +830,17 @@
         }
 
         .contact-info::before {
-            content: '▲\A ║\A ◆\A ║\A ▼';
+            content: '██\A██\A▓▓\A██\A██';
             position: absolute;
             top: 25px;
             right: 25px;
             font-family: 'Orbitron', monospace;
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: var(--medium-blue);
             opacity: 0.4;
             white-space: pre;
             line-height: 0.9;
+            letter-spacing: 0;
         }
 
         .contact-item {
@@ -887,7 +898,7 @@
         }
 
         .contact-form-container::before {
-            content: '◆◆◆\A◆◆◆\A◆◆◆';
+            content: '▓▓▓\A▓▓▓\A▓▓▓';
             position: absolute;
             top: 25px;
             right: 25px;
@@ -897,7 +908,7 @@
             opacity: 0.4;
             white-space: pre;
             line-height: 1.2;
-            letter-spacing: 2px;
+            letter-spacing: 1px;
         }
 
         .contact-form-container h3 {
@@ -950,16 +961,16 @@
         }
 
         .footer::before {
-            content: '▲ ◆ ▲ ◆ ▲ ◆ ▲';
+            content: '██ ▓▓ ██ ▓▓ ██ ▓▓ ██';
             position: absolute;
             top: 25px;
             left: 50%;
             transform: translateX(-50%);
             font-family: 'Orbitron', monospace;
-            font-size: 1.2rem;
+            font-size: 1rem;
             color: var(--medium-blue);
             opacity: 0.4;
-            letter-spacing: 8px;
+            letter-spacing: 6px;
         }
 
         .footer p {
@@ -969,6 +980,11 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .nav-container {
+                justify-content: space-between;
+                gap: 0;
+            }
+
             .menu-toggle {
                 display: flex;
             }
@@ -1214,23 +1230,23 @@
     <!-- Retro Grid Background -->
     <div class="retro-grid"></div>
 
-    <!-- Retro Cactus Doodles -->
+    <!-- Pixel Art Cactus Doodles -->
     <div class="cactus-doodles">
-        <div class="retro-cactus large">▲<br>║<br>║<br>═</div>
-        <div class="retro-cactus medium">▲<br>║<br>▼</div>
-        <div class="retro-cactus small">▲<br>║</div>
-        <div class="retro-cactus large">◆<br>║<br>║<br>╬</div>
-        <div class="retro-cactus medium">▲<br>◆<br>║</div>
-        <div class="retro-cactus small">◆<br>║</div>
-        <div class="retro-cactus large">▲<br>║<br>◆<br>║</div>
-        <div class="retro-cactus medium">▲<br>║<br>◇</div>
+        <div class="pixel-cactus large">██<br>██<br>██<br>▓▓</div>
+        <div class="pixel-cactus medium">██<br>██<br>▓▓</div>
+        <div class="pixel-cactus small">██<br>▓▓</div>
+        <div class="pixel-cactus large">▓▓<br>██<br>██<br>▓▓</div>
+        <div class="pixel-cactus medium">██<br>▓▓<br>██</div>
+        <div class="pixel-cactus small">▓▓<br>██</div>
+        <div class="pixel-cactus large">██<br>██<br>▓▓<br>██</div>
+        <div class="pixel-cactus medium">██<br>██<br>░░</div>
     </div>
     
     <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">
-                <span class="logo-cactus">▲<br>║</span>
+                <span class="logo-cactus">██<br>▓▓</span>
                 MONIKA.BS
             </div>
             <div class="menu-toggle">
@@ -1668,10 +1684,10 @@
             this.reset();
         });
 
-        // Parallax effect for retro cactuses
+        // Parallax effect for pixel cactuses
         window.addEventListener('scroll', () => {
             const scrolled = window.pageYOffset;
-            const cactuses = document.querySelectorAll('.retro-cactus');
+            const cactuses = document.querySelectorAll('.pixel-cactus');
             
             cactuses.forEach((cactus, index) => {
                 const speed = 0.05 + (index * 0.02);
@@ -1679,8 +1695,8 @@
             });
         });
 
-        // Retro cactus click interaction
-        document.querySelectorAll('.retro-cactus').forEach((cactus, index) => {
+        // Pixel cactus click interaction
+        document.querySelectorAll('.pixel-cactus').forEach((cactus, index) => {
             cactus.style.cursor = 'pointer';
             cactus.addEventListener('click', () => {
                 cactus.style.animation = 'bounce 0.5s ease';
@@ -1694,13 +1710,13 @@
                     cactus.style.color = 'var(--medium-blue)';
                 }, 500);
                 
-                // Retro messages
+                // Pixel art messages
                 const messages = [
-                    '▲ RETRO VIBES ACTIVATED ▲',
-                    '◆ AESTHETIC MODE ON ◆',
-                    '▼ CACTUS POWER ENGAGED ▼',
-                    '◇ PIXEL PERFECT ◇',
-                    '▲ VINTAGE TECH UNLOCKED ▲'
+                    '██ PIXEL PERFECT ██',
+                    '▓▓ RETRO ACTIVATED ▓▓',
+                    '██ 8-BIT VIBES ██',
+                    '▓▓ PIXEL POWER ▓▓',
+                    '██ CACTUS CLICKED ██'
                 ];
                 const randomMessage = messages[Math.floor(Math.random() * messages.length)];
                 
